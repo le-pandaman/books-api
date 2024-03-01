@@ -30,3 +30,5 @@ class BookTest(TestCase):
         response = self.client.get(reverse('book_list'))
 
         self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'book_list.html')
+        self.assertContains(response, 'krem')

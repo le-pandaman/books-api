@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-y58337qu3eees$6)lvhs=u*4obv!f)2lce!hply+)hjn%*(+-c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -34,6 +34,7 @@ INSTALLED_APPS = [
 
     # apps
     'books.apps.BooksConfig',
+    'apis.apps.ApisConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,7 +47,7 @@ INSTALLED_APPS = [
 
     # Third party libraries
 
-    # 'rest_framework',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
